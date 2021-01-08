@@ -35,7 +35,7 @@ CREATE TABLE `doctor` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 
-DROP TABLE IF EXISTS `donar_inf`;
+DROP TABLE IF EXISTS `donor_inf`;
 CREATE TABLE `donar_inf` (
   `donor_name` varchar(200) NOT NULL,
   `mobile_no` varchar(200) NOT NULL,
@@ -104,7 +104,7 @@ INSERT INTO `blood2` (`rbg_id`,`bg`,`amount`) VALUES ('A-1','A+',100),('A-2','A-
 
 INSERT INTO `doctor` (`doctor_id`,`doctor_name`,`doctor_qual`) VALUES ('DR001','NEELESH MISHRA','MBBS FROM SPAIN'),('DR002','SUBHI DUTTA','MD FROM JAPAN');
 
-INSERT INTO `donar_inf` (`donor_name`,`mobile_no`,`email_id`) VALUES ('MANISH RAJ ARYAN','9456632581','aryanmkl@gmail.com'),('SURJIT DOHRE','9407243167','dohregwl@gmail.com'),('SUMIT SINGH','7725824563','lovablesumit@gmail.com'),('MAHESH KUMAR','9654364587','mahesh121@gmail.com'),('MOHAN DAS MURMUR','9422747555','mohan@gmail.com'),('RANJAN SRIVASTAVA','9931633952','Ranjan4321@gmail.com'),('AARTI SHARMA','7542413698','sharma.aarti@gmail.com'),('SURESH KUMAR','9425654865','suresh@gmail.com'),('SURBHI GUPTA','8252625002','sweetsurbhi@gmail.com');
+INSERT INTO `donor_inf` (`donor_name`,`mobile_no`,`email_id`) VALUES ('MANISH RAJ ARYAN','9456632581','aryanmkl@gmail.com'),('SURJIT DOHRE','9407243167','dohregwl@gmail.com'),('SUMIT SINGH','7725824563','lovablesumit@gmail.com'),('MAHESH KUMAR','9654364587','mahesh121@gmail.com'),('MOHAN DAS MURMUR','9422747555','mohan@gmail.com'),('RANJAN SRIVASTAVA','9931633952','Ranjan4321@gmail.com'),('AARTI SHARMA','7542413698','sharma.aarti@gmail.com'),('SURESH KUMAR','9425654865','suresh@gmail.com'),('SURBHI GUPTA','8252625002','sweetsurbhi@gmail.com');
 
 INSERT INTO `donation` (`donation_id`,`bg_id`) VALUES ('D001','A-1'),('D002','B-1'),('D003','O-1'),('D004','AB-1'),('D005','A-2'),('D006','O-2'),('D007','B-2'),('D008','B-3'),('D009','A-3');
 
