@@ -116,6 +116,92 @@ INSERT INTO `receiver` (`receiver_id`,`receiver_name`,`receiver_address`,`dob`,`
 
 INSERT INTO `receiver_inf` (`receiver_name`,`mobile_no`,`email_id`) VALUES ('ANJALI SHARMA','9654155455','anjali@gmail.com'),('ANURAG MISHRA','9855565454','anurag@gmail.com'),('CHITRANG MURDIYA','9565544545','chitrang@gmail.com'),('JEEVAN JYOTI','8458415415','Jeevan16@gmail.com'),('PRAVEEN KUMAR','9589656454','praveen@gmail.com'),('RAHUL ASTHANA','7755455454','Rahul123@gmail.com'),('RAHUL SHUKLA','9641545544','rahuls@gmail.com'),('ROHIT VERMA','7515555415','rohit@gmail.com');
 
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table "blood"
+--
+ALTER TABLE "blood"
+  ADD PRIMARY KEY ("dbg_id");
+
+--
+-- Indexes for table "blood2"
+--
+ALTER TABLE "blood2"
+  ADD PRIMARY KEY ("rbg_id");
+
+--
+-- Indexes for table "doctor"
+--
+ALTER TABLE "doctor"
+  ADD PRIMARY KEY ("doctor_id");
+
+--
+-- Indexes for table "donar_inf"
+--
+ALTER TABLE "donar_inf"
+  ADD PRIMARY KEY ("email_id");
+
+--
+-- Indexes for table "donation"
+--
+ALTER TABLE "donation"
+  ADD PRIMARY KEY ("donation_id");
+
+--
+-- Indexes for table "donor"
+--
+ALTER TABLE "donor"
+  ADD PRIMARY KEY ("donation_id");
+
+--
+-- Indexes for table "receipt"
+--
+ALTER TABLE "receipt"
+  ADD PRIMARY KEY ("receiver_id");
+
+--
+-- Indexes for table "receiver"
+--
+ALTER TABLE "receiver"
+  ADD PRIMARY KEY ("receiver_id");
+
+--
+-- Indexes for table "receiver_inf"
+--
+ALTER TABLE "receiver_inf"
+  ADD PRIMARY KEY ("email_id");
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table "donation"
+--
+ALTER TABLE "donation"
+  ADD CONSTRAINT "donation_ibfk_1" FOREIGN KEY ("donation_id") REFERENCES "donor" ("donation_id");
+
+--
+-- Constraints for table "donor"
+--
+ALTER TABLE "donor"
+  ADD CONSTRAINT "donor_ibfk_1" FOREIGN KEY ("donation_id") REFERENCES "donation" ("donation_id");
+
+--
+-- Constraints for table "receipt"
+--
+ALTER TABLE "receipt"
+  ADD CONSTRAINT "receipt_ibfk_1" FOREIGN KEY ("receiver_id") REFERENCES "receiver" ("receiver_id");
+
+--
+-- Constraints for table "receiver"
+--
+ALTER TABLE "receiver"
+  ADD CONSTRAINT "receiver_ibfk_1" FOREIGN KEY ("receiver_id") REFERENCES "receipt" ("receiver_id");
+
+
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
